@@ -5,6 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        // Configured Table area
         var table = new Table(5, 5);
         var robot = new Robot(table);
 
@@ -12,7 +14,7 @@ class Program
         {
             var input = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(input)) break;
-
+            // Destructuring input and executing steps
             var command = input.Split(' ');
             switch (command[0])
             {

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToyRobotSimulator.Services;
 
 namespace ToyRobotSimulator
 {
     public enum Direction { NORTH, EAST, SOUTH, WEST }
 
-    public class Robot
+    public class Robot: IRobotActions,IRobotIO
     {
         public int X { get; private set; }
         public int Y { get; private set; }
@@ -20,15 +21,8 @@ namespace ToyRobotSimulator
             _table = table;
         }
 
-        public void Place(int x, int y, Direction direction)
-        {
-            if (_table.IsPositionValid(x, y))
-            {
-                X = x;
-                Y = y;
-                Facing = direction;
-            }
-        }
+
+        // Implement all actions imported from interface
 
         public void Move()
         {
@@ -50,7 +44,15 @@ namespace ToyRobotSimulator
 
         public void TurnLeft() => Facing = (Direction)(((int)Facing + 3) % 4);
         public void TurnRight() => Facing = (Direction)(((int)Facing + 1) % 4);
-
+        public void Place(int x, int y, Direction direction)
+        {
+            if (_table.IsPositionValid(x, y))
+            {
+                X = x;
+                Y = y;
+                Facing = direction;
+            }
+        }
         public string Report() => $"{X},{Y},{Facing}";
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ToyRobotSimulator.Services
 {
-    internal interface Interface1
+    public interface IRobotActions
     {
-        // Injectable service interfaces.
+        public void Move();
+        public void TurnLeft();
+        public void TurnRight();
     }
 }

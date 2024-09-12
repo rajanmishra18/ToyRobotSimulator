@@ -16,7 +16,7 @@ namespace ToyRobotSimulator
             _width = width;
             _height = height;
         }
-
+        // Check for position inside boundary
         public bool IsPositionValid(int x, int y)
         {
             return x >= 0 && x < _width && y >= 0 && y < _height;
