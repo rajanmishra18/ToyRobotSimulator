@@ -1,0 +1,26 @@
+# Ignore Visual Studio temporary files, build results, and
+# build directories.
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.nupkg
+*.lock.json
+.vs/
+.vscode/
+*.dbmdl
+*.dbproj.schemaview
+
+# Rider and JetBrains specific files
+.idea/
+.Rider/
+
+# Auto-generated files (optional)
+*.g.*

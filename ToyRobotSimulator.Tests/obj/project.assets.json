@@ -1708,6 +1708,16 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "ToyRobotSimulator/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ToyRobotSimulator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ToyRobotSimulator.dll": {}
+        }
       }
     }
   },
@@ -5497,11 +5507,17 @@
         "xunit.runner.visualstudio.2.5.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "ToyRobotSimulator/1.0.0": {
+      "type": "project",
+      "path": "../ToyRobotSimulator/ToyRobotSimulator.csproj",
+      "msbuildProject": "../ToyRobotSimulator/ToyRobotSimulator.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.NET.Test.Sdk >= 17.8.0",
+      "ToyRobotSimulator >= 1.0.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
       "xunit.runner.visualstudio >= 2.5.3"
@@ -5539,7 +5555,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rajan\\ToyRobotSimulator\\ToyRobotSimulator\\ToyRobotSimulator.csproj": {
+              "projectPath": "C:\\Users\\rajan\\ToyRobotSimulator\\ToyRobotSimulator\\ToyRobotSimulator.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
