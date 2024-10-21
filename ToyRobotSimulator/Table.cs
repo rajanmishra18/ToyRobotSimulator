@@ -17,6 +17,7 @@ namespace ToyRobotSimulator
             _height = height;
         }
         // Check for position inside boundary
+        // Added few comments for PR check
         public bool IsPositionValid(int x, int y)
         {
             return x >= 0 && x < _width && y >= 0 && y < _height;
